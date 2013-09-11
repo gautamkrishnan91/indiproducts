@@ -1,0 +1,170 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+select{
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+#header-wrapper{
+	background: url('../images/header-logo-bg.png') repeat-x;
+    width: 100%;
+}
+#header{
+	width: 1000px;
+	height: 88px;
+	margin: 0 auto;
+}
+#logo{
+	width: 215px;
+	height: 88px;
+	background: url("../images/shopclues_logo.png");
+	float: left;
+}
+#header-middle{
+	float: left;
+	margin-left: 15px;
+}
+#captionbar{
+	height: 35px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 8px;
+    font-family: 'museosans';
+}
+#searchbar{
+	float: left;
+}
+#mainselect{
+	width: 220px;
+	height: 30px;
+	font-family: 'DroidSans';
+	font-size: 15px;
+	float: left;
+}
+#searchbox{
+	width: 320px;
+	height: 26px;
+	float: left;
+	margin-left: 10px;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-bottom-left-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: 1px solid #ccc;
+	padding-left: 5px;
+}
+#searchbutton{
+	height: 28px;
+	width: 30px;
+	background: #fff;
+	float: left;
+	border: 1px solid #24a50a;
+	border-left: 0;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background: rgb(38,143,11); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(38,143,11,1) 1%, rgba(36,133,10,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(38,143,11,1)), color-stop(100%,rgba(36,133,10,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(38,143,11,1) 1%,rgba(36,133,10,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(38,143,11,1) 1%,rgba(36,133,10,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(38,143,11,1) 1%,rgba(36,133,10,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(38,143,11,1) 1%,rgba(36,133,10,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#268f0b', endColorstr='#24850a',GradientType=0 ); /* IE6-9 */
+}
+#search-icon{
+	background: url("../images/searchglass.png");
+	width: 15px;
+	height: 15px;
+	margin: 7px;
+}
+#social-box{
+    float: right;
+    color: #fff;
+    font-size: 13px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 30px;
+}
+#social-facebook{
+    background: url('../images/facebook48.png') no-repeat;
+    height: 48px;
+    width: 48px;
+    margin-top: 5px;
+    float: left;
+}
+#social-twitter{
+    background: url('../images/twitter48.png') no-repeat;
+    height: 48px;
+    width: 48px;
+    margin-top: 5px;
+    float: right;
+}
+#top-slogan{
+    float: right;
+    color: #FFF;
+    margin: 25px 20px 0 0;
+    text-align: center;
+    text-shadow: 0px 0px 0px #fff;
+}
+#menubar-wrapper{
+	background: url("../images/menu-bg.png") repeat-x;
+	height: 40px;
+	box-shadow: 0px 2px 2px #ccc;
+}
+#menubar{
+	color: #c8f3bd;
+	width: 1000px;
+	margin: 0 auto;
+	font-size: 13px;
+}
+#menubar ul{
+	list-style: none;
+	margin: 0;
+	padding-top: 12px;
+	padding-left: 10px;
+}
+#menubar ul li{
+	list-style: none;
+	margin-right: 25px;
+	float: left;
+}
+#menubar ul li:hover{
+	color: #FFF;
+	font-weight: 400;
+	cursor: pointer;
+}
+.menu-home{
+	background: #175507;
+	width: 50px;
+	text-align: center;
+	height: 21px;
+	margin-top: -5px;
+	padding-top: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+#footer-wrapper{
+	width: 1000px;
+	margin: 0 auto;
+	border-top: 1px solid #ddd;
+	margin-top: 20px;
+}

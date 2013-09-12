@@ -285,3 +285,19 @@ select{
     clear: both;
     height: 0;
 }
+
+/* Submit form */
+
+.submit-form-container{
+    width: 100%;
+    padding: 20px;
+}
+.submit-form-container h3{
+    font-size: 24px;
+}
+.submit-form-container p{
+    margin-top: 20px;
+}
+.submit-form-container .form-wrapper{
+    margin-top: 20px;
+}

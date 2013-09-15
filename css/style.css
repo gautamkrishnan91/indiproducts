@@ -288,6 +288,15 @@ select{
 
 /* Submit form */
 
+.statusMessageContainer{
+    font-size: 13px;
+    background: #EEE;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #DDD;
+    display: none;
+}
 .submit-form-container{
     width: 100%;
     padding: 20px;
@@ -297,7 +306,46 @@ select{
 }
 .submit-form-container p{
     margin-top: 20px;
+    display: block;
 }
 .submit-form-container .form-wrapper{
     margin-top: 20px;
+    width: 380px;
+    height: auto;
+    float: left;
+}
+.form-wrapper form table{
+    float: left;
+}
+.form-wrapper form table td{
+    vertical-align: middle;
+    padding-top: 10px;
+}
+.form-wrapper form input, .form-wrapper form select{
+    clear: both;
+    float: left;
+    margin-left: 40px;
+}
+.form-wrapper form select{
+    width: 220px;
+    height: 30px;
+}
+.form-wrapper form input[type=text]{
+    width: 220px;
+    height: 30px;
+}
+.form-wrapper form label{
+    margin-bottom: 10px;
+}
+.form-wrapper form input[type=submit]{
+    background: url("../images/menu-bg.png") repeat-x;
+    height: 30px;
+    width: 80px;
+    border: 1px solid #1f6d09;
+    border-radius: 2px;
+    color: #FFF;
+    cursor: pointer;
+    float: none;
+    margin: 40px 0 0 150px;
+    font-weight: bolder;
 }

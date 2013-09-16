@@ -21,10 +21,7 @@ echo"
         if ($inserted == 1) {echo"
     <div class='statusMessageContainer'>Data added successfully, thank you!</div>
     <script>
-    	$('.statusMessageContainer').slideDown(500);
-    	setTimeout(function(){
-	   	$('.statusMessageContainer').slideUp(500);
-		}, 4000);
+    	addedSuccessNotification();
     </script>";}
     echo"
     <div id='content-wrapper'>
@@ -32,25 +29,34 @@ echo"
     		<h3>Submit an Indian Product</h3>
     		<p>Submit an Indian product here.</p>
     		<div class='form-wrapper'>
-    			<form action='submit.php' method='post'>
+    			<form action='submit.php' method='post' name='indian_form'>
 	    			<table border='0'>
 	    				<tr><td valign='middle'><label for='prod_name'>Product name: </label></td><td valign='middle'><input type='text' id='prod_name' name='prod_name'/></td></tr>
 	    				<tr><td><label for='prod_company'>Brand: </label></td><td><input type='text' id='prod_company' name='prod_company'/></td></tr>
 	    				<tr><td><label for='prod_contact'>Contact: </label></td><td><input type='text' id='prod_contact' name='prod_contact'/></td></tr>
 	    				<tr><td><label for='prod_web'>Website: </label></td><td><input type='text' id='prod_web' name='prod_web'/></td></tr>
 	    				<tr><td><label for='prod_cat'>Category: </label></td><td>
-	    					<select id='prod_cat' name='prod_cat'>
-		    					<option value='Food'>Food</option>
-		    					<option value='Beverages'>Beverages</option>
-		    					<option value='Fashion and Clothing'>Fashion and Clothing</option>
-		    					<option value='Electronics'>Electronics</option>
-		    					<option value='Consumables'>Consumables</option>
-		    					<option value='Two-Wheelers and Automobiles'>Two-Wheelers and Automobiles</option>
-		    					<option value='Home and Living'>Home and Living</option>
-		    					<option value='Beauty and Personal Care'>Beauty and Personal Care</option>
-		    					<option value='Sports and Fitness'>Sports and Fitness</option>
+	    					<select id='prod_cat' name='prod_cat' onchange='submitSubCategory(this);'>
+		    					<option value='Food' sid='1'>Food</option>
+		    					<option value='Beverages' sid='2'>Beverages</option>
+		    					<option value='Fashion and Clothing' sid='3'>Fashion and Clothing</option>
+		    					<option value='Electronics' sid='4'>Electronics</option>
+		    					<option value='Consumables' sid='5'>Consumables</option>
+		    					<option value='Two-Wheelers and Automobiles' sid='6'>Two-Wheelers and Automobiles</option>
+		    					<option value='Home and Living' sid='7'>Home and Living</option>
+		    					<option value='Beauty and Personal Care' sid='8'>Beauty and Personal Care</option>
+		    					<option value='Sports and Fitness' sid='9'>Sports and Fitness</option>
 	    					</select></td></tr>
-	    				<tr><td><label for='prod_subcat'>Sub Category: </label></td><td><input type='text' id='prod_subcat' name='prod_subcat'/></td></tr>
+	    				<tr><td><label for='prod_subcat'>Sub Category: </label></td><td>
+	    					<select id='prod_subcat' name='prod_subcat'>
+		    					<option value='Food' sid='1'>Biscuits</option>
+		    					<option value='Food' sid='1'>Chocolates</option>
+		    					<option value='Food' sid='1'>Coffee Shops</option>
+		    					<option value='Food' sid='1'>Confectioneries</option>
+		    					<option value='Food' sid='1'>Ice Creams</option>
+		    					<option value='Food' sid='1'>Pizzerias</option>
+		    					<option value='Food' sid='1'>Restaurants</option>
+	    					</select></td></tr>
 	    				<tr><td><label for='prod_comments'>Comments: </label></td><td><input type='text' id='prod_comments' name='prod_comments'/></td></tr>
 	    			</table>
 	    			<input type='submit' value='Submit'/>

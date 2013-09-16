@@ -1,3 +1,6 @@
 function addedSuccessNotification(){
-	alert('here');
+	$('.statusMessageContainer').slideDown(500);
+    	setTimeout(function(){
+	   	$('.statusMessageContainer').slideUp(500);
+		}, 4000);
 }

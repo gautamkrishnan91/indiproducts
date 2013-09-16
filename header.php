@@ -30,11 +30,11 @@
 				<li>Brands</li>
 				<li>Categories</li>
 				<li>Stories</li>
-				<li>Submit</li>
 				<li>Blog</li>
 				<li>About us</li>
 				<li>Feedback</li>
 				<li>Get involved</li>
+				<li class='flRight'>Submit</li>
 			</ul>
 		</div>
 	</div>";

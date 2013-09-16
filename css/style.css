@@ -27,6 +27,9 @@ select{
 	border: 1px solid #ccc;
 	border-radius: 3px;
 }
+.flRight{
+    float: right !important;
+}
 #header-wrapper{
 	background: url('../images/header-logo-bg.png') repeat-x;
     width: 100%;
@@ -348,4 +351,5 @@ select{
     float: none;
     margin: 40px 0 0 150px;
     font-weight: bolder;
+    text-shadow: 1px 1px #555;
 }

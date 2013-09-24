@@ -41,11 +41,10 @@ echo"
 		    					<option value='Beverages' sid='2'>Beverages</option>
 		    					<option value='Fashion and Clothing' sid='3'>Fashion and Clothing</option>
 		    					<option value='Electronics' sid='4'>Electronics</option>
-		    					<option value='Consumables' sid='5'>Consumables</option>
+		    					<option value='Consumables' sid='5'>Beauty, Personal Care & Consumables</option>
 		    					<option value='Two-Wheelers and Automobiles' sid='6'>Two-Wheelers and Automobiles</option>
 		    					<option value='Home and Living' sid='7'>Home and Living</option>
-		    					<option value='Beauty and Personal Care' sid='8'>Beauty and Personal Care</option>
-		    					<option value='Sports and Fitness' sid='9'>Sports and Fitness</option>
+		    					<option value='Sports and Fitness' sid='8'>Other</option>
 	    					</select></td></tr>
 	    				<tr><td><label for='prod_subcat'>Sub Category: </label></td><td>
 	    					<select id='prod_subcat' name='prod_subcat'>
@@ -57,7 +56,7 @@ echo"
 		    					<option value='Food' sid='1'>Pizzerias</option>
 		    					<option value='Food' sid='1'>Restaurants</option>
 	    					</select></td></tr>
-	    				<tr><td><label for='prod_comments'>Comments: </label></td><td><input type='text' id='prod_comments' name='prod_comments'/></td></tr>
+	    				<tr><td><label for='prod_comments'>Comments: </label></td><td><textarea id='prod_comments' name='prod_comments'></textarea></td></tr>
 	    			</table>
 	    			<input type='submit' value='Submit'/>
     			</form>

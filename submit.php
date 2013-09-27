@@ -1,14 +1,25 @@
 <?php 
-	require_once 'connection.php';
+	session_start();
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+
+	require_once 'connection.php';	
 	$inserted = 0;
-	if (isset($_POST['prod_name'], $_POST['prod_company'], $_POST['prod_cat'], $_POST['prod_subcat'])) {
+	if (isset($_POST['prod_name'], $_POST['prod_company'], $_POST['prod_cat'], $_POST['prod_subcat'], $_POST['captcha_code'])) {
 
-	mysqli_query($con,"INSERT INTO indian_temp (name, company, contact, website, category, subcategory, comments, created_at)
-	VALUES ('$_POST[prod_name]', '$_POST[prod_company]', '$_POST[prod_contact]', '$_POST[prod_web]', '$_POST[prod_cat]', '$_POST[prod_subcat]', '$_POST[prod_comments]', now())");
-	$inserted =1;
+	$securimage = new Securimage();
 
-	mysqli_close($con);
+	if ($securimage->check($_POST['captcha_code']) == false) {
+		echo "The security code entered was incorrect.<br /><br />";
+	  	echo "Please go <a href='javascript:history.go(-1)'>back</a> and try again.";
+	  	exit;
+	}	
+	else{
+		mysqli_query($con,"INSERT INTO indian_temp (name, company, contact, website, category, subcategory, comments, created_at)
+		VALUES ('$_POST[prod_name]', '$_POST[prod_company]', '$_POST[prod_contact]', '$_POST[prod_web]', '$_POST[prod_cat]', '$_POST[prod_subcat]', '$_POST[prod_comments]', now())");
+		$inserted =1;
 
+		mysqli_close($con);
+	}
 }
 
 echo"
@@ -58,6 +69,10 @@ echo"
 	    					</select></td></tr>
 	    				<tr><td><label for='prod_comments'>Comments: </label></td><td><textarea id='prod_comments' name='prod_comments'></textarea></td></tr>
 	    			</table>
+	    			<img id='captcha' src='/securimage/securimage_show.php' alt='CAPTCHA Image' />
+	    			<input type='text' name='captcha_code' size='10' maxlength='6' />
+
+<a href='#'' onclick='document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false'>[ Different Image ]</a>
 	    			<input type='submit' value='Submit'/>
     			</form>
     		</div>

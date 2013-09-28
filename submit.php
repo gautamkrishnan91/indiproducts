@@ -69,10 +69,9 @@ echo"
 	    					</select></td></tr>
 	    				<tr><td><label for='prod_comments'>Comments: </label></td><td><textarea id='prod_comments' name='prod_comments'></textarea></td></tr>
 	    			</table>
+	    			<div class='captchatext'>CAPTCHA: type the word in the field below.</div>
 	    			<img id='captcha' src='/securimage/securimage_show.php' alt='CAPTCHA Image' />
-	    			<input type='text' name='captcha_code' size='10' maxlength='6' />
-
-<a href='#'' onclick='document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false'>[ Different Image ]</a>
+	    			<input type='text' class='captchabox' name='captcha_code' size='10' maxlength='6' />
 	    			<input type='submit' value='Submit'/>
     			</form>
     		</div>

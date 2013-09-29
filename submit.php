@@ -36,17 +36,17 @@ echo"
     </script>";}
     echo"
     <div id='content-wrapper'>
+    	<h3>Submit an Indian Product</h3>
+    	<p>Submit an Indian product here. Fields marked with an <span class='requiredfield'>*</span> are mandatory.</p>
     	<div class='submit-form-container'>
-    		<h3>Submit an Indian Product</h3>
-    		<p>Submit an Indian product here.</p>
     		<div class='form-wrapper'>
-    			<form action='submit.php' method='post' name='indian_form'>
+    			<form action='submit.php' method='post' name='indian_form' onsubmit='return submitFormValidator();'>
 	    			<table border='0'>
-	    				<tr><td valign='middle'><label for='prod_name'>Product name: </label></td><td valign='middle'><input type='text' id='prod_name' name='prod_name'/></td></tr>
-	    				<tr><td><label for='prod_company'>Brand: </label></td><td><input type='text' id='prod_company' name='prod_company'/></td></tr>
+	    				<tr><td valign='middle'><label for='prod_name'><div class='requiredfield'>*</div>Product name: </label></td><td valign='middle'><input type='text' id='prod_name' name='prod_name'/></td></tr>
+	    				<tr><td><label for='prod_company'><div class='requiredfield'>*</div>Brand: </label></td><td><input type='text' id='prod_company' name='prod_company'/></td></tr>
 	    				<tr><td><label for='prod_contact'>Contact: </label></td><td><input type='text' id='prod_contact' name='prod_contact'/></td></tr>
 	    				<tr><td><label for='prod_web'>Website: </label></td><td><input type='text' id='prod_web' name='prod_web'/></td></tr>
-	    				<tr><td><label for='prod_cat'>Category: </label></td><td>
+	    				<tr><td><label for='prod_cat'><div class='requiredfield'>*</div>Category: </label></td><td>
 	    					<select id='prod_cat' name='prod_cat' onchange='submitSubCategory(this);'>
 		    					<option value='Food' sid='1'>Food</option>
 		    					<option value='Beverages' sid='2'>Beverages</option>
@@ -57,7 +57,7 @@ echo"
 		    					<option value='Home and Living' sid='7'>Home and Living</option>
 		    					<option value='Sports and Fitness' sid='8'>Other</option>
 	    					</select></td></tr>
-	    				<tr><td><label for='prod_subcat'>Sub Category: </label></td><td>
+	    				<tr><td><label for='prod_subcat'><div class='requiredfield'>*</div>Sub Category: </label></td><td>
 	    					<select id='prod_subcat' name='prod_subcat'>
 		    					<option value='Food' sid='1'>Biscuits</option>
 		    					<option value='Food' sid='1'>Chocolates</option>
@@ -69,9 +69,9 @@ echo"
 	    					</select></td></tr>
 	    				<tr><td><label for='prod_comments'>Comments: </label></td><td><textarea id='prod_comments' name='prod_comments'></textarea></td></tr>
 	    			</table>
-	    			<div class='captchatext'>CAPTCHA: type the word in the field below.</div>
+	    			<div class='captchatext'><div class='requiredfield'>*</div>CAPTCHA: type the word in the field below.</div>
 	    			<img id='captcha' src='/securimage/securimage_show.php' alt='CAPTCHA Image' />
-	    			<input type='text' class='captchabox' name='captcha_code' size='10' maxlength='6' />
+	    			<input type='text' class='captchabox' id='captchabox' name='captcha_code' size='10' maxlength='6' />
 	    			<input type='submit' value='Submit'/>
     			</form>
     		</div>

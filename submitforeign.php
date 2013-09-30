@@ -14,8 +14,8 @@
 	  	exit;
 	}	
 	else{
-		mysqli_query($con,"INSERT INTO indian_temp (name, company, contact, website, category, subcategory, comments, created_at)
-		VALUES ('$_POST[prod_name]', '$_POST[prod_company]', '$_POST[prod_contact]', '$_POST[prod_web]', '$_POST[prod_cat]', '$_POST[prod_subcat]', '$_POST[prod_comments]', now())");
+		mysqli_query($con,"INSERT INTO foreign_temp (name, company, category, subcategory, comments, created_at)
+		VALUES ('$_POST[prod_name]', '$_POST[prod_company]', '$_POST[prod_cat]', '$_POST[prod_subcat]', '$_POST[prod_comments]', now())");
 		$inserted =1;
 
 		mysqli_close($con);
@@ -36,16 +36,14 @@ echo"
     </script>";}
     echo"
     <div id='content-wrapper'>
-    	<h3>Submit an Indian Product</h3>
+    	<h3>Submit a Foreign Product</h3>
     	<p>Submit an Indian product here. Fields marked with an <span class='requiredfield'>*</span> are mandatory.</p>
     	<div class='submit-form-container'>
     		<div class='form-wrapper'>
-    			<form action='submit.php' method='post' name='indian_form' onsubmit='return submitFormValidator();'>
+    			<form action='submitforeign.php' method='post' name='indian_form' onsubmit='return submitFormValidator();'>
 	    			<table border='0'>
 	    				<tr><td valign='middle'><label for='prod_name'><div class='requiredfield'>*</div>Product name: </label></td><td valign='middle'><input type='text' id='prod_name' name='prod_name'/></td></tr>
 	    				<tr><td><label for='prod_company'><div class='requiredfield'>*</div>Brand: </label></td><td><input type='text' id='prod_company' name='prod_company'/></td></tr>
-	    				<tr><td><label for='prod_contact'>Contact: </label></td><td><input type='text' id='prod_contact' name='prod_contact'/></td></tr>
-	    				<tr><td><label for='prod_web'>Website: </label></td><td><input type='text' id='prod_web' name='prod_web'/></td></tr>
 	    				<tr><td><label for='prod_cat'><div class='requiredfield'>*</div>Category: </label></td><td>
 	    					<select id='prod_cat' name='prod_cat' onchange='submitSubCategory(this);'>
 		    					<option value='Food' sid='1'>Food</option>

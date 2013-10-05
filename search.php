@@ -1,4 +1,7 @@
 <?php 
+	
+	$_GET['category'];
+	$_GET['search'];
 
 	require_once 'connection.php';	
 	$query = "SELECT * FROM indian_temp";

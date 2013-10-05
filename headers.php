@@ -5,5 +5,6 @@
 <link rel='stylesheet' href='css/slider.css'>
 <script src='js/jquery.min.js'></script>
 <script src='js/notifications.js'></script>
-<script src='js/dropdown.js'></script>";
+<script src='js/dropdown.js'></script>
+<script src='js/setheaderlink.js'></script>";
 ?>

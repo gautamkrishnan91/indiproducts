@@ -11,22 +11,21 @@ echo"
 			<div id='logo'></div>
 			<div id='header-middle'>
 				<div id='searchbar'>
-					<select id='mainselect'>
-						<option value='All Categories'>All Categories</option>
+					<form action='search.php' method='get'>
+					<select id='mainselect' name='category'>
+						<option value='All'>All Categories</option>
 						<option value='Food'>Food</option>
     					<option value='Beverages'>Beverages</option>
-    					<option value='Fashion and Clothing'>Fashion and Clothing</option>
+    					<option value='Fashion&Clothing'>Fashion and Clothing</option>
     					<option value='Electronics'>Electronics</option>
     					<option value='Consumables'>Beauty, Personal Care & Consumables</option>
-    					<option value='Two-Wheelers and Automobiles'>Two-Wheelers and Automobiles</option>
-    					<option value='Home and Living'>Home and Living</option>
-    					<option value='Sports and Fitness'>Other</option>
+    					<option value='Two-Wheelers&Automobiles'>Two-Wheelers and Automobiles</option>
+    					<option value='Home&Living'>Home and Living</option>
+    					<option value='Other'>Other</option>
 					</select>
-					<input type='text' id='searchbox' placeholder='Search for brand/product'>
-					<div id='searchbutton'>
-						<div id='search-icon'>
-						</div>
-					</div>
+					<input type='text' id='searchbox' name='search' placeholder='Search for brand/product'>
+					<input type='submit' id='searchbutton'></input>
+					</form>
 				</div>
 			</div>
 			<div id='header-right'>

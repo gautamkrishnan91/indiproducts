@@ -6,6 +6,15 @@
 	$inserted = 0;
 	if (isset($_POST['prod_name'], $_POST['prod_company'], $_POST['prod_cat'], $_POST['prod_subcat'], $_POST['captcha_code'])) {
 
+	$prodname = check_input($_POST['prod_name']);
+	$prodcompany = check_input($_POST['prod_company']);
+	$prodcontact = check_input($_POST['prod_contact']);
+	$prodweb = check_input($_POST['prod_web']);
+	$prodcat = check_input($_POST['prod_cat']);
+	$prodsubcat = check_input($_POST['prod_subcat']);
+	$prodcomment = check_input($_POST['prod_comments']);
+
+
 	$securimage = new Securimage();
 
 	if ($securimage->check($_POST['captcha_code']) == false) {
@@ -15,7 +24,7 @@
 	}	
 	else{
 		mysqli_query($con,"INSERT INTO indian_temp (name, company, contact, website, category, subcategory, comments, created_at)
-		VALUES ('$_POST[prod_name]', '$_POST[prod_company]', '$_POST[prod_contact]', '$_POST[prod_web]', '$_POST[prod_cat]', '$_POST[prod_subcat]', '$_POST[prod_comments]', now())");
+		VALUES ('$prodname', '$prodcompany', '$prodcontact', '$prodweb', '$prodcat', '$prodsubcat', '$prodcomment', now())");
 		$inserted =1;
 
 		mysqli_close($con);

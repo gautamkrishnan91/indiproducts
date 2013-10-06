@@ -218,12 +218,11 @@ select{
 }
 #right-why-pane-title{
     width: auto;
-    height: 24px;
     background: url('../images/header-logo-bg.png') repeat-x;
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'droidsans';
-    padding: 6px 0 0 0px;
+    padding: 10px 5px;
     text-align: center;
 }
 #right-why-pane ul{

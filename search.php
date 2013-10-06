@@ -19,17 +19,17 @@
  			echo"<div class='noSearchQuery'>Please enter a valid search query.</div>";
  		}
  		else{
- 			$category = $_GET['category'];
+ 			$category = check_input($_GET['category']);
  			if(($category=='All')||($category=='Food')||($category=='Beverages')||($category=='Fashion&Clothing')||($category=='Electronics')||($category=='Consumables')||($category=='Two-Wheelers&Automobiles')||($category=='Home&Living')||($category=='Other'))
  			{
  				if(empty($_GET['search'])){
  					echo"<div class='noSearchQuery'>Your search query seems to be empty. Please search again!</div>";
  				}
  				else{
- 					$category = $_GET['category'];
- 					$search = $_GET['search'];
+ 					$category = check_input($_GET['category']);
+ 					$search = check_input($_GET['search']);
 
- 					$query = "SELECT * FROM indian_temp WHERE name LIKE '%".mysql_real_escape_string($search)."%'";
+ 					$query = "SELECT * FROM indian_temp WHERE name LIKE '%".$search."%'";
  					
 					$result = mysqli_query($con, $query);
 					

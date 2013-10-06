@@ -4,9 +4,20 @@ indiproducts
 A service to help Indians choose products made in India over imported ones.
 
 
-Sub cat:
+Yet to be done:
 
--Consumables: 
-    -Soap bars
-    -Dental care
-    -
+	Pages:
+		-Brands
+		-Categories
+		-About
+		-Stories
+		-Blog
+		-About
+		-Feedback
+		-Get Involved
+
+	Elements:
+		-Footer
+		-Logo and Name for the service
+
+	Facebook and Twitter branding

@@ -22,7 +22,7 @@
         <div id='content-wrapper'>
             <div id='left-about-pane'>
                 <h2>What is IndianProducts?</h2>
-                Wypas lollipop gingerbread pie tart sesame snaps. Carrot cake chocolate tootsie roll powder. Sugar plum bear claw gingerbread cake lollipop marshmallow. Dragee sesame snaps wypas bonbon faworki lemon drops sesame snaps. Pie candy muffin. Lollipop cotton candy chocolate cake gummies chocolate bar.
+                IndianProducts is a service to help Indians choose products made in India by wholly owned Indian companies over imported ones. The service currently under construction. Err, even the name hasn't been decided yet!
             </div>
             <div id='center-gallery'>
                 <div id='slider-wrapper'>

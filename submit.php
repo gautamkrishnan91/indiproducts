@@ -23,7 +23,7 @@
 	  	exit;
 	}	
 	else{
-		mysqli_query($con,"INSERT INTO indian_temp (name, company, contact, website, category, subcategory, comments, created_at)
+		mysqli_query("INSERT INTO indian_temp (name, company, contact, website, category, subcategory, comments, created_at)
 		VALUES ('$prodname', '$prodcompany', '$prodcontact', '$prodweb', '$prodcat', '$prodsubcat', '$prodcomment', now())");
 		$inserted =1;
 

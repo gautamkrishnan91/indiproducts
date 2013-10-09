@@ -1,13 +1,11 @@
 <?php
 // Create connection
-	$con=mysqli_connect("localhost","root","","products_store");
+	$con = mysqli_connect("mysql2.000webhost.com","a3538007_geekay","gautam123","a3538007_indiant");
+
+	if(!$con) die('General Connection Error!');									        //Setting up the database
 
 	// Check connection
-	if (mysqli_connect_errno($con))
-	  {
-	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	  }
-
+	
 	function check_input($value)
 	{
 	// Stripslashes
@@ -18,7 +16,8 @@
 	// Quote if not a number
 	if (!is_numeric($value))
 	  {
-	  $value = mysql_real_escape_string($value);
+	  $con = mysqli_connect("mysql2.000webhost.com","a3538007_geekay","gautam123","a3538007_indiant");
+	  $value = mysqli_real_escape_string($con, $value);
 	  }
 	return $value;
 	}

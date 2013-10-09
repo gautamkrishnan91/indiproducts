@@ -3,7 +3,7 @@
 	if(isset($_GET['category'],$_GET['search'])){
 		$searchSet = 1;
 	}
-
+	$con = mysqli_connect("mysql2.000webhost.com","a3538007_geekay","gautam123","a3538007_indiant");		
 	require_once 'connection.php';	
 
  echo"
@@ -30,6 +30,8 @@
  					$search = check_input($_GET['search']);
 
  					$query = "SELECT * FROM indian_temp WHERE name LIKE '%".$search."%'";
+
+ 					echo $query;
  					
 					$result = mysqli_query($con, $query);
 					

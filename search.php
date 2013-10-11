@@ -30,8 +30,6 @@
  					$search = check_input($_GET['search']);
 
  					$query = "SELECT * FROM indian_temp WHERE name LIKE '%".$search."%'";
-
- 					echo $query;
  					
 					$result = mysqli_query($con, $query);
 					

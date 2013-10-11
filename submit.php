@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+	include_once '/home/vol11_1/byethost11.com/b11_13826268/htdocs/securimage/securimage.php';
 
 	require_once 'connection.php';	
 	$inserted = 0;
@@ -23,7 +23,7 @@
 	  	exit;
 	}	
 	else{
-		mysqli_query("INSERT INTO indian_temp (name, company, contact, website, category, subcategory, comments, created_at)
+		mysqli_query($con, "INSERT INTO indian_temp (name, company, contact, website, category, subcategory, comments, created_at)
 		VALUES ('$prodname', '$prodcompany', '$prodcontact', '$prodweb', '$prodcat', '$prodsubcat', '$prodcomment', now())");
 		$inserted =1;
 

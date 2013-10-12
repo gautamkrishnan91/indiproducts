@@ -14,4 +14,7 @@ function getHeader(){
 	if (pageName == 'feedback.php'){
 		$("#mainFeedbackPage").addClass("menu-select");
 	}
+	if (pageName == 'getinvolved.php'){
+		$("#mainGetInvolved").addClass("menu-select");
+	}
 }

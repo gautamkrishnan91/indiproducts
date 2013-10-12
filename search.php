@@ -3,7 +3,8 @@
 	if(isset($_GET['category'],$_GET['search'])){
 		$searchSet = 1;
 	}
-	$con = mysqli_connect("mysql2.000webhost.com","a3538007_geekay","gautam123","a3538007_indiant");		
+	//$con = mysqli_connect("mysql2.000webhost.com","a3538007_geekay","gautam123","a3538007_indiant");
+	$con = mysqli_connect("localhost","root","","products_store");		
 	require_once 'connection.php';	
 
  echo"
@@ -51,17 +52,17 @@
 					 			<th class='category'>Category</th>
 					 			<th class='subcategory'>Sub-category</th>
 					 			<th class='comments'>Comments</th>
-					 		</tr>
-					 		<tr><td>";
+					 		</tr>";
 					 			
 					 		while($row = mysqli_fetch_array($result)){
+					 			echo "<tr><td>";
 								echo $row['name']."</td><td>";
 								echo $row['company']."</td><td>";
 								echo $row['contact']."</td><td class='link'>";
 								echo $row['website']."</td><td>";
 								echo $row['category']."</td><td>";
 								echo $row['subcategory']."</td><td>";
-								echo $row['comments']."</td>";
+								echo $row['comments']."</td></tr>";
 							}
 
 		 					echo "</table></div>";

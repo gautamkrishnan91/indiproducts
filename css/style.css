@@ -528,3 +528,13 @@ select{
 .searchresults td:last-child{
     border-right: none;
 }
+
+/* Feedback Page */
+
+.feedback-wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.feedback-content p{
+    line-height: 24px;
+}

@@ -11,4 +11,7 @@ function getHeader(){
 	if (pageName == 'submit.php'){
 		$("#mainSubmitPage").addClass("menu-select");
 	}
+	if (pageName == 'feedback.php'){
+		$("#mainFeedbackPage").addClass("menu-select");
+	}
 }

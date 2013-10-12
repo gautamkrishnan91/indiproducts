@@ -46,7 +46,7 @@ echo"
 				<li>Stories</li>
 				<li>Blog</li>
 				<li>About us</li>
-				<li>Feedback</li>
+				<li id='mainFeedbackPage'><a href='feedback.php'>Feedback</a></li>
 				<li>Get involved</li>
 				<li id='mainSubmitPage' class='flRight'><a href='submit.php'>Submit</a></li>
 			</ul>

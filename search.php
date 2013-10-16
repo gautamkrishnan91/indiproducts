@@ -48,22 +48,18 @@
 					 		<tr>
 					 			<th class='name'>Product Name</th>
 					 			<th class='brand'>Brand</th>
-					 			<th class='contact'>Contact</th>
 					 			<th class='link'>Website</th>
 					 			<th class='category'>Category</th>
 					 			<th class='subcategory'>Sub-category</th>
-					 			<th class='comments'>Comments</th>
 					 		</tr>";
 					 			
 					 		while($row = mysqli_fetch_array($result)){
 					 			echo "<tr><td>";
 								echo $row['name']."</td><td>";
-								echo $row['company']."</td><td>";
-								echo $row['contact']."</td><td class='link'>";
-								echo $row['website']."</td><td>";
+								echo $row['company']."</td><td><a href='";
+								echo $row['website']."' target='_blank'>Link</a></td><td>";
 								echo $row['category']."</td><td>";
-								echo $row['subcategory']."</td><td>";
-								echo $row['comments']."</td></tr>";
+								echo $row['subcategory']."</td>";
 							}
 
 		 					echo "</table></div>";

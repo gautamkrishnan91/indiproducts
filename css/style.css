@@ -493,13 +493,16 @@ select{
     border-top-right-radius: 4px;
 }
 .searchresults tr .name, .searchresults tr .brand{
-    width: 120px;
-    text-align: left;
+    width: 196px;
+    text-align: center;
     padding-left: 8px;
+}
+.searchresults tr:nth-child(odd){
+    background: #F8F8F8;
 }
 .searchresults tr .contact{
     width: 180px;
-    text-align: left;
+    text-align: center;
     padding-left: 8px;
 }
 .searchresults tr .link{
@@ -507,13 +510,8 @@ select{
     text-align: center;
 }
 .searchresults tr .category, .searchresults tr .subcategory{
-    width: 140px;
-    text-align: left;
-    padding-left: 8px;
-}
-.searchresults tr .comments{
-    width: 200px;
-    text-align: left;
+    width: 196px;
+    text-align: center;
     padding-left: 8px;
 }
 .searchresults td{

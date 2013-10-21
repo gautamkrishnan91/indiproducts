@@ -311,6 +311,9 @@ select{
 .submit-form-container{
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 #content-wrapper h3{
     font-size: 24px;
@@ -535,4 +538,30 @@ select{
 }
 .feedback-content p{
     line-height: 24px;
+}
+
+/* Get Involved */
+
+.addComment{
+    margin: 15px 0;
+    padding: 9px 0 0 19px;
+    display: table;
+    font-size: 12px;
+    float: left;
+    background: url('../images/add.png') no-repeat left center;
+    text-decoration: underline;
+    cursor: pointer;
+    height: 30px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.getinvolvedfooter{
+    clear: both;
+    float: left;
+}
+.getinvolvedfooter .captchatext{
+    padding-top: 30px;
+}
+#involveCommentText{
+    display: none;
 }

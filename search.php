@@ -3,10 +3,10 @@
 	if(isset($_GET['category'],$_GET['search'])){
 		$searchSet = 1;
 	}
+	require_once 'connection.php';	
 	//$con = mysqli_connect("mysql2.000webhost.com","a3538007_geekay","gautam123","a3538007_indiant");
 	$con = mysqli_connect("sql102.byethost11.com","b11_13826268","6fb371qx","b11_13826268_products_store");
 	//$con = mysqli_connect("localhost","root","","products_store");		
-	require_once 'connection.php';	
 
  echo"
 <html>

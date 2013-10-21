@@ -108,3 +108,9 @@ function submitFormValidator(){
     document.getElementById('prod_name').focus();
     return false;
 }
+
+//Show comment box in Get Involved Page
+function showCommentBox(){
+    document.getElementById('addComment').style.display = 'none';
+    document.getElementById('involveCommentText').style.display = 'block';
+}

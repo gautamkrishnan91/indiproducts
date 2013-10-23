@@ -565,3 +565,6 @@ select{
 #involveCommentText{
     display: none;
 }
+#getInvolvedTable2 textarea{
+    margin-left: 62px;
+}

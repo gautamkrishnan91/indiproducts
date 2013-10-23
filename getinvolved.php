@@ -1,7 +1,11 @@
 <?php  
-	//require_once 'connection.php';	
+	session_start();
+	include_once '/home/vol11_1/byethost11.com/b11_13826268/htdocs/securimage/securimage.php';
+	
+	require_once 'connection.php';	
+	$inserted = 0;
 	//$con = mysqli_connect("mysql2.000webhost.com","a3538007_geekay","gautam123","a3538007_indiant");
-	//$con = mysqli_connect("sql102.byethost11.com","b11_13826268","6fb371qx","b11_13826268_products_store");
+	$con = mysqli_connect("sql102.byethost11.com","b11_13826268","6fb371qx","b11_13826268_products_store");
 	//$con = mysqli_connect("localhost","root","","products_store");		
 echo"
 <html>
@@ -24,9 +28,11 @@ echo"
 		 						<table border='0'>
 				    				<tr><td valign='middle'><label for='prod_name'>Your name: </label></td><td valign='middle'><input type='text' id='prod_name' name='prod_name'/></td></tr>
 				    				<tr><td><label for='prod_company'>Email Address: </label></td><td><input type='text' id='prod_company' name='prod_company'/></td></tr>
-				    				<tr id='involveCommentText'><td><label for='prod_comments'>Comments: </label></td><td><textarea id='prod_comments' name='prod_comments'></textarea></td></tr>
 				    			</table>
 				    			<div class='addComment' id='addComment' onClick='showCommentBox();'>Add a comment? (Optional)</div>
+				    			<table border='0' id='getInvolvedTable2'>
+				    				<tr id='involveCommentText'><td><label for='prod_comments'>Comments: </label></td><td><textarea id='prod_comments' name='prod_comments'></textarea></td></tr>
+				    			</table>
 				    			<div class='getinvolvedfooter'>
 					    			<div class='captchatext'><div class='requiredfield'>*</div>CAPTCHA: type the word in the field below.</div>
 					    			<img id='captcha' src='/securimage/securimage_show.php' alt='CAPTCHA Image' />

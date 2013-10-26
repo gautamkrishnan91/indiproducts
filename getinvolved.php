@@ -4,9 +4,28 @@
 	
 	require_once 'connection.php';	
 	$inserted = 0;
-	//$con = mysqli_connect("mysql2.000webhost.com","a3538007_geekay","gautam123","a3538007_indiant");
-	$con = mysqli_connect("sql102.byethost11.com","b11_13826268","6fb371qx","b11_13826268_products_store");
-	//$con = mysqli_connect("localhost","root","","products_store");		
+	
+	if (isset($_POST['involved_name'], $_POST['involved_email'], $_POST['captcha_code'])) {
+
+	$name = check_input($_POST['involved_name']);
+	$email = check_input($_POST['involved_email']);
+	$comments = check_input($_POST['involved_comment']);
+
+	$securimage = new Securimage();
+
+	if ($securimage->check($_POST['captcha_code']) == false) {
+		echo "The security code entered was incorrect.<br /><br />";
+	  	echo "Please go <a href='javascript:history.go(-1)'>back</a> and try again.";
+	  	exit;
+	}	
+	else{
+		mysqli_query($con, "INSERT INTO getinvolved (name, email, comments)
+		VALUES ('$name', '$email', '$comments')");
+		$inserted =1;
+
+		mysqli_close($con);
+	}
+}
 echo"
 <html>
 	<head>";
@@ -15,6 +34,11 @@ echo"
 	</head>
 	<body>";
 		include 'header.php';
+		if ($inserted == 1) {echo"
+	    <div class='statusMessageContainer'>Data added successfully, thank you!</div>
+	    <script>
+	    	addedSuccessNotification();
+	    </script>";}
         echo"
  		<div id='content-wrapper'>
  			<div class='feedback-wrapper'>
@@ -26,12 +50,12 @@ echo"
  						<div class='form-wrapper'>
 		 					<form action='getinvolved.php' method='post' name='getinvolved_form' onsubmit='return getInvolvedFormValidator();'>
 		 						<table border='0'>
-				    				<tr><td valign='middle'><label for='prod_name'>Your name: </label></td><td valign='middle'><input type='text' id='prod_name' name='prod_name'/></td></tr>
-				    				<tr><td><label for='prod_company'>Email Address: </label></td><td><input type='text' id='prod_company' name='prod_company'/></td></tr>
+				    				<tr><td valign='middle'><label for='involved_name'>Your name: </label></td><td valign='middle'><input type='text' id='involved_name' name='involved_name'/></td></tr>
+				    				<tr><td><label for='involved_email'>Email Address: </label></td><td><input type='text' id='involved_email' name='involved_email'/></td></tr>
 				    			</table>
 				    			<div class='addComment' id='addComment' onClick='showCommentBox();'>Add a comment? (Optional)</div>
 				    			<table border='0' id='getInvolvedTable2'>
-				    				<tr id='involveCommentText'><td><label for='prod_comments'>Comments: </label></td><td><textarea id='prod_comments' name='prod_comments'></textarea></td></tr>
+				    				<tr id='involveCommentText'><td><label for='involved_comment'>Comments: </label></td><td><textarea id='involved_comment' name='involved_comment'></textarea></td></tr>
 				    			</table>
 				    			<div class='getinvolvedfooter'>
 					    			<div class='captchatext'><div class='requiredfield'>*</div>CAPTCHA: type the word in the field below.</div>

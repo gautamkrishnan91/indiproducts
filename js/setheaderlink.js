@@ -17,4 +17,7 @@ function getHeader(){
 	if (pageName == 'getinvolved.php'){
 		$("#mainGetInvolved").addClass("menu-select");
 	}
+	if (pageName == 'brands.php'){
+		$("#mainBrands").addClass("menu-select");
+	}
 }

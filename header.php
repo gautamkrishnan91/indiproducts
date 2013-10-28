@@ -41,7 +41,7 @@ echo"
 		<div id='menubar'>
 			<ul> 
 				<li id='mainHomepage'><a href='index.php'>Home</a></li>
-				<li>Brands</li>
+				<li id='mainBrands'><a href='brands.php'>Brands</a></li>
 				<li>Categories</li>
 				<li>Stories</li>
 				<li>Blog</li>

@@ -11,7 +11,7 @@ echo"
 	</head>
 	<body>";
 		include 'header.php';
-		$query = "SELECT * FROM brands WHERE category LIKE 'Food'";
+		$query = "SELECT * FROM brands WHERE category LIKE 'Food' LIMIT 10";
 		$result = mysqli_query($con, $query);
 		if($result === FALSE){
 			echo"<div class='noSearchQuery'>Sorry, something went wrong on our side!</div>";
@@ -19,7 +19,7 @@ echo"
         echo"
  		<div id='content-wrapper'>
  		<div id='brand-showcase-index'>
-                <div class='brand-showcase-header'>Top Electronics brands<div class='brand-showcase-header-viewall'>View all</div></div>
+                <div class='brand-showcase-header'>Top Food brands<div class='brand-showcase-header-viewall'>View all</div></div>
                 <div class='brand-showcase-boxes'>";
                 while($row = mysqli_fetch_array($result)){
                 echo "
@@ -30,29 +30,18 @@ echo"
                	}
                 echo"</div>
 
-                <div class='brand-showcase-header'>Top Food brands<div class='brand-showcase-header-viewall'>View all</div></div>
-                <div class='brand-showcase-boxes'>
+                <div class='brand-showcase-header'>Top Electronics brands<div class='brand-showcase-header-viewall'>View all</div></div>
+                <div class='brand-showcase-boxes'>";
+                	$query = "SELECT * FROM brands WHERE category LIKE 'Electronics' LIMIT 10";
+					$result = mysqli_query($con, $query);
+					while($row = mysqli_fetch_array($result)){
+					echo "
                     <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'></div>
-                        <div class='brand-showcase-element-text'>Hello</div>
-                    </div>
-                    <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'></div>
-                        <div class='brand-showcase-element-text'>Hello</div>
-                    </div>
-                    <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'></div>
-                        <div class='brand-showcase-element-text'>Hello</div>
-                    </div>
-                    <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'></div>
-                        <div class='brand-showcase-element-text'>Hello</div>
-                    </div>
-                    <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'></div>
-                        <div class='brand-showcase-element-text'>Hello</div>
-                    </div>
-                </div>
+                        <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
+                        <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                    </div>";
+                	}
+                	echo"</div>
             </div>
  		</div>
 ";

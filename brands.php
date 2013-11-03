@@ -19,7 +19,7 @@ echo"
         echo"
  		<div id='content-wrapper'>
  		<div id='brand-showcase-index'>
-                <div class='brand-showcase-header'>Top Food brands<div class='brand-showcase-header-viewall'>View all</div></div>
+                <div class='brand-showcase-header'>Top Food brands<div class='brand-showcase-header-viewall'><a href='categories.php?category=Food'>View all</a></div></div>
                 <div class='brand-showcase-boxes'>";
                 while($row = mysqli_fetch_array($result)){
                 echo "
@@ -30,7 +30,7 @@ echo"
                	}
                 echo"</div>
 
-                <div class='brand-showcase-header'>Top Electronics brands<div class='brand-showcase-header-viewall'>View all</div></div>
+                <div class='brand-showcase-header'>Top Electronics brands<div class='brand-showcase-header-viewall'><a href='categories.php?category=Electronics'>View all</a></div></div>
                 <div class='brand-showcase-boxes'>";
                 	$query = "SELECT * FROM brands WHERE category LIKE 'Electronics' LIMIT 10";
 					$result = mysqli_query($con, $query);

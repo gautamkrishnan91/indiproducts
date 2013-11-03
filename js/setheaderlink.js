@@ -20,4 +20,7 @@ function getHeader(){
 	if (pageName == 'brands.php'){
 		$("#mainBrands").addClass("menu-select");
 	}
+	if (pageName == 'categories.php'){
+		$("#mainCategories").addClass("menu-select");
+	}
 }

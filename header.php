@@ -42,7 +42,7 @@ echo"
 			<ul> 
 				<li id='mainHomepage'><a href='index.php'>Home</a></li>
 				<li id='mainBrands'><a href='brands.php'>Brands</a></li>
-				<li>Categories</li>
+				<li id='mainCategories'><a href='categories.php'>Categories</a></li>
 				<li>Stories</li>
 				<li>Blog</li>
 				<li>About us</li>

@@ -574,3 +574,23 @@ select{
 #getInvolvedTable2 textarea{
     margin-left: 62px;
 }
+
+/* Categories */
+
+.categories-left{
+    width: 200px;
+    float: left;
+    height: 200px;
+}
+.categories-left ul li{
+    padding: 5px 0;
+}
+.categories-right{
+    width: 800px;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border-left: 1px solid #dedede;
+    height: 200px;
+}

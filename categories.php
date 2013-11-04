@@ -18,6 +18,21 @@ echo"
 		}
         echo"
  		<div id='content-wrapper'>
+            <div class='categories-left'>
+                <ul>
+                    <li>All</li>
+                    <li>Food</li>
+                    <li>Beverages</li>
+                    <li>Fashion and Clothing</li>
+                    <li>Electronics</li>
+                    <li>Beauty, Personal Care and Consumables</li>
+                    <li>Two-Wheelers and Automobiles</li>
+                    <li>Home and Living</li>
+                    <li>Other</li>
+                </ul>
+            </div>
+            <div class='categories-right'>
+            </div>
  		</div>
 ";
 

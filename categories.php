@@ -8,6 +8,7 @@ echo"
 	<head>";
 		include 'headers.php';
         echo"
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
 	</head>
 	<body>";
 		include 'header.php';

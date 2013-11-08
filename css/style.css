@@ -590,6 +590,7 @@ select{
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     line-height: 21px;
+    cursor: pointer;
 }
 .categories-right{
     width: 800px;
@@ -599,4 +600,15 @@ select{
     -moz-box-sizing: border-box;
     border-left: 1px solid #dedede;
     height: 200px;
+}
+.categories-master li{
+    display: block;
+    float: left;
+    padding: 10px 20px;
+    width: 100%;
+}
+.categories-inner li{
+    float: left;
+    display: block;
+    width: auto;
 }

@@ -33,6 +33,150 @@ echo"
                 </ul>
             </div>
             <div class='categories-right'>
+                <ul class='categories-master'>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                            <li>2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                            <li>3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                            <li>4</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>5</li>
+                            <li>5</li>
+                            <li>5</li>
+                            <li>5</li>
+                            <li>5</li>
+                            <li>5</li>
+                            <li>5</li>
+                            <li>5</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>6</li>
+                            <li>6</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                            <li>7</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>8</li>
+                            <li>8</li>
+                            <li>8</li>
+                            <li>8</li>
+                            <li>8</li>
+                            <li>8</li>
+                            <li>8</li>
+                            <li>8</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                            <li>9</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class='categories-inner'>
+                            <li>10</li>
+                            <li>10</li>
+                            <li>10</li>
+                            <li>10</li>
+                            <li>10</li>
+                            <li>10</li>
+                            <li>10</li>
+                            <li>10</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
  		</div>
 ";

@@ -12,7 +12,7 @@ echo"
 	</head>
 	<body>";
 		include 'header.php';
-		$query = "SELECT * FROM brands WHERE category LIKE 'Food' LIMIT 10";
+		$query = "SELECT DISTINCT company FROM indian_temp";
 		$result = mysqli_query($con, $query);
 		if($result === FALSE){
 			echo"<div class='noSearchQuery'>Sorry, something went wrong on our side!</div>";
@@ -31,8 +31,32 @@ echo"
                     <li>Home and Living</li>
                     <li>Other</li>
                 </ul>
-            </div>
-            <div class='categories-right'>
+            </div>";
+            $resultSet = array();
+            while($row = mysqli_fetch_array($result)){
+                $resultSet[] = $row['company'];
+            }
+            for($asci = 97; $asci < 123; $asci++){
+
+                $charac = chr($asci);
+                echo $charac;
+                for($i=0;$i<count($resultSet);$i++){
+                    if(strcasecmp($charac, $resultSet[$i][0])==0)
+                    echo $resultSet[$i];
+                }
+            }
+            // for($asci = 97; $asci < 123; $asci++)
+            // {
+            //     $charac = chr($asci);
+            //     echo $charac;
+                
+            //         echo $charac;
+            //         if(strcasecmp($charac, $row['company'][0])==0)
+            //         echo $row['company'];
+                
+            // }
+            
+            echo"<div class='categories-right'>
                 <ul class='categories-master'>
                     <li>
                         <ul class='categories-inner'>

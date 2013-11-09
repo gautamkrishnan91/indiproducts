@@ -599,7 +599,7 @@ select{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     border-left: 1px solid #dedede;
-    height: 200px;
+    min-height: 300px;
 }
 .categories-master li{
     display: block;

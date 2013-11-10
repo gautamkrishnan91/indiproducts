@@ -39,16 +39,20 @@ echo"
                         $resultSet[] = $row['company'];
                     }
                     for($asci = 97; $asci < 123; $asci++){
-                    echo"
-                    <li>
-                        <ul class='categories-inner'>";
                         $charac = chr($asci);
                         for($i=0;$i<count($resultSet);$i++){
-                            if(strcasecmp($charac, $resultSet[$i][0])==0)
-                            echo "<li>".$resultSet[$i]."</li>";
+                            if(strcasecmp($charac, $resultSet[$i][0])==0){
+                                echo"
+                                <li>
+                                    <ul class='categories-inner'>";
+                                    for($i=0;$i<count($resultSet);$i++){
+                                        if(strcasecmp($charac, $resultSet[$i][0])==0)
+                                        echo "<li>".$resultSet[$i]."</li>";
+                                    }
+                                echo"</li>
+                                </ul>";
+                            }
                         }
-                    echo"</li>
-                    </ul>";
                     }
             // for($asci = 97; $asci < 123; $asci++)
             // {

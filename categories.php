@@ -31,20 +31,25 @@ echo"
                     <li>Home and Living</li>
                     <li>Other</li>
                 </ul>
-            </div>";
-            $resultSet = array();
-            while($row = mysqli_fetch_array($result)){
-                $resultSet[] = $row['company'];
-            }
-            for($asci = 97; $asci < 123; $asci++){
-
-                $charac = chr($asci);
-                echo $charac;
-                for($i=0;$i<count($resultSet);$i++){
-                    if(strcasecmp($charac, $resultSet[$i][0])==0)
-                    echo $resultSet[$i];
-                }
-            }
+            </div>
+            <div class='categories-right'>
+                <ul class='categories-master'>";
+                    $resultSet = array();
+                    while($row = mysqli_fetch_array($result)){
+                        $resultSet[] = $row['company'];
+                    }
+                    for($asci = 97; $asci < 123; $asci++){
+                    echo"
+                    <li>
+                        <ul class='categories-inner'>";
+                        $charac = chr($asci);
+                        for($i=0;$i<count($resultSet);$i++){
+                            if(strcasecmp($charac, $resultSet[$i][0])==0)
+                            echo "<li>".$resultSet[$i]."</li>";
+                        }
+                    echo"</li>
+                    </ul>";
+                    }
             // for($asci = 97; $asci < 123; $asci++)
             // {
             //     $charac = chr($asci);
@@ -56,152 +61,7 @@ echo"
                 
             // }
             
-            echo"<div class='categories-right'>
-                <ul class='categories-master'>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                            <li>2</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                            <li>3</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>4</li>
-                            <li>4</li>
-                            <li>4</li>
-                            <li>4</li>
-                            <li>4</li>
-                            <li>4</li>
-                            <li>4</li>
-                            <li>4</li>
-                            <li>4</li>
-                            <li>4</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                            <li>5</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>6</li>
-                            <li>6</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                            <li>7</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>8</li>
-                            <li>8</li>
-                            <li>8</li>
-                            <li>8</li>
-                            <li>8</li>
-                            <li>8</li>
-                            <li>8</li>
-                            <li>8</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                            <li>9</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class='categories-inner'>
-                            <li>10</li>
-                            <li>10</li>
-                            <li>10</li>
-                            <li>10</li>
-                            <li>10</li>
-                            <li>10</li>
-                            <li>10</li>
-                            <li>10</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            echo"
  		</div>
 ";
 

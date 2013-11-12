@@ -1,5 +1,11 @@
 <?php
-	$_GET['option'];
+	// $_GET['view'];
+	// $show = 0;
+	// if(!isset($_GET['view'])){
+	// 	$show = 0;
+	// }
+	// else{
+	// 	if()
 	require_once 'connection.php';	
 	$con = mysqli_connect("sql102.byethost11.com","b11_13826268","6fb371qx","b11_13826268_products_store");
 	$query = "SELECT * FROM indian_temp";
@@ -42,4 +48,5 @@ echo"
 			</table>
 		</body>
 	</html>";
+	// }
 ?>

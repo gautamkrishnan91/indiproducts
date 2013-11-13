@@ -240,6 +240,10 @@ select{
     font-size: 13px;
     list-style-position: inside;
 }
+.intro-para{
+    line-height: 22px;
+    margin-top: 30px;
+}
 #brand-showcase-index{
     width: 1000px;
     margin: 0 auto;

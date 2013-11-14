@@ -381,7 +381,7 @@ select{
 .form-wrapper form label{
     margin-bottom: 10px;
 }
-.form-wrapper form input[type=submit]{
+.form-wrapper form input[type=submit], .indexActionButton{
     background: url("../images/menu-bg.png") repeat-x;
     height: 30px;
     width: 80px;
@@ -393,6 +393,20 @@ select{
     margin: 80px 0 40px 40px;
     font-weight: bolder;
     text-shadow: 1px 1px #555;
+}
+.indexActionButton{
+    width: 200px;
+    height: 60px;
+    margin: 0 auto;
+    background-size: auto 100%;
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding-top: 21px;
+}
+.indexAction{
+    width: 100%;
+    margin: 40px 0;
 }
 .form-wrapper form textarea{
     float: right;

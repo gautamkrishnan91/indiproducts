@@ -292,10 +292,16 @@ select{
     margin: 0 auto;
     border: 1px solid #aaa;
     overflow: hidden;
+    position: relative;
 }
 .brand-showcase-element-box img{
     width: 148px;
-    height: auto;
+    min-height: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 150px;
 }
 .brand-showcase-element-text{
     text-align: center;

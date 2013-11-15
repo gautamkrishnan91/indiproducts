@@ -2,6 +2,9 @@ a, a:visited, a:active, a:focus{
     color: inherit;
     text-decoration: inherit;
 }
+iframe{
+    display: none !important;
+}
 @font-face {
     font-family: 'DroidSans';
     src: url('../fonts/DroidSans-webfont.eot');

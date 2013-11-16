@@ -1,6 +1,7 @@
 <?php
-
+    $_GET['brand'];
 	require_once 'connection.php';	
+    $brand = check_input($_GET['brand']);
 	$con = mysqli_connect("sql102.byethost11.com","b11_13826268","6fb371qx","b11_13826268_products_store");
 
 echo"
@@ -11,16 +12,14 @@ echo"
 	</head>
 	<body>";
 		include 'header.php';
-		$query = "SELECT * FROM brands WHERE category LIKE 'Food' LIMIT 10";
-		$result = mysqli_query($con, $query);
-		if($result === FALSE){
-			echo"<div class='noSearchQuery'>Sorry, something went wrong on our side!</div>";
-		}
         echo"
- 		<div id='content-wrapper'>
- 		<div id='brand-showcase-index'>
-
-                <div class='brand-showcase-header'>Top Food brands<div class='brand-showcase-header-viewall'><a href='categories.php?category=Food'>View all</a></div></div>
+ 		<div id='content-wrapper'>";
+        $brand = strtolower($brand);
+        if(($brand == '') || !isset($_GET['brand'])){
+ 		echo" <div id='brand-showcase-index'>";
+                $query = "SELECT * FROM brands WHERE category LIKE 'Food' LIMIT 10";
+                $result = mysqli_query($con, $query);
+                echo "<div class='brand-showcase-header'>Top Food brands<div class='brand-showcase-header-viewall'><a href='categories.php?category=Food'>View all</a></div></div>
                 <div class='brand-showcase-boxes'>";
                 while($row = mysqli_fetch_array($result)){
                 echo "
@@ -69,8 +68,15 @@ echo"
                     </div>";
                     }
                     echo"</div>
-            </div>
- 		</div>
+            </div>";
+            }
+            else{
+                $query = "SELECT * FROM brands WHERE category LIKE 'Food' LIMIT 10";
+                $result = mysqli_query($con, $query);
+            }
+ 		echo"</div>
+        </body>
+    </html>
 ";
 
 ?>

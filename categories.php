@@ -13,7 +13,7 @@ echo"
 	<body>";
 		include 'header.php';
         $category = strtolower($category);
-        if(($category == '') || ($category == 'food') || ($category == 'beverages') || ($category == 'fashion') || ($category == 'electronics') || ($category == 'consumables') || ($category == 'twowheelers') || ($category == 'homeandliving') || ($category == 'other')){
+        if(($category == '') || ($category == 'food') || ($category == 'beverages') || ($category == 'fashion and clothing') || ($category == 'electronics') || ($category == 'consumables') || ($category == 'twowheelers') || ($category == 'homeandliving') || ($category == 'other')){
         echo"
  		<div id='content-wrapper'>
             <div class='categories-left'>

@@ -263,10 +263,10 @@ select{
     border-bottom: 1px solid #ddd;
     box-shadow: 0px 2px 2px #ddd;
     padding-bottom: 5px;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 .brand-showcase-header:first-child{
-    margin-top: 0px;
+    margin-top: 30px;
 }
 .brand-showcase-header-viewall{
     float: right;
@@ -282,6 +282,9 @@ select{
 .brand-showcase-boxes{
     margin-top: 20px;
     float: left;
+}
+.brand-showcase-boxes:last-child{
+    margin-bottom: 20px;
 }
 .brand-showcase-element{
     width: 160px;

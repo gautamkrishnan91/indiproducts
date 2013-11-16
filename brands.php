@@ -56,6 +56,19 @@ echo"
                     </div>";
                     }
                     echo"</div>
+
+                <div class='brand-showcase-header'>Top Fashion and Clothing brands<div class='brand-showcase-header-viewall'><a href='categories.php?category=Fashion%20and%20Clothing'>View all</a></div></div>
+                <div class='brand-showcase-boxes'>";
+                    $query = "SELECT * FROM brands WHERE category LIKE 'Fashion and Clothing' LIMIT 10";
+                    $result = mysqli_query($con, $query);
+                    while($row = mysqli_fetch_array($result)){
+                    echo "
+                    <div class='brand-showcase-element'>
+                        <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
+                        <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                    </div>";
+                    }
+                    echo"</div>
             </div>
  		</div>
 ";

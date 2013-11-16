@@ -19,6 +19,7 @@ echo"
         echo"
  		<div id='content-wrapper'>
  		<div id='brand-showcase-index'>
+
                 <div class='brand-showcase-header'>Top Food brands<div class='brand-showcase-header-viewall'><a href='categories.php?category=Food'>View all</a></div></div>
                 <div class='brand-showcase-boxes'>";
                 while($row = mysqli_fetch_array($result)){
@@ -42,6 +43,19 @@ echo"
                     </div>";
                 	}
                 	echo"</div>
+
+                <div class='brand-showcase-header'>Top Beverages brands<div class='brand-showcase-header-viewall'><a href='categories.php?category=Beverages'>View all</a></div></div>
+                <div class='brand-showcase-boxes'>";
+                    $query = "SELECT * FROM brands WHERE category LIKE 'Beverages' LIMIT 10";
+                    $result = mysqli_query($con, $query);
+                    while($row = mysqli_fetch_array($result)){
+                    echo "
+                    <div class='brand-showcase-element'>
+                        <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
+                        <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                    </div>";
+                    }
+                    echo"</div>
             </div>
  		</div>
 ";

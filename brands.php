@@ -71,8 +71,14 @@ echo"
             </div>";
             }
             else{
-                $query = "SELECT * FROM brands WHERE category LIKE 'Food' LIMIT 10";
+                $query = "SELECT * FROM brands WHERE brand LIKE '%".$brand."%'";
                 $result = mysqli_query($con, $query);
+                if(mysqli_num_rows($result) == 0){
+                    echo "<div class='brands-blankslate'>Sorry, no brands found for your query.</div>";
+                }
+                else{
+                    
+                }
             }
  		echo"</div>
         </body>

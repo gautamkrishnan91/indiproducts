@@ -318,6 +318,12 @@ select{
     clear: both;
     height: 0;
 }
+.brands-blankslate{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
 
 /* Submit form */
 

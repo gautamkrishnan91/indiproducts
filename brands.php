@@ -103,7 +103,15 @@ echo"
                                     <td>".$row['about']."</td>
                                 </tr>
                             </table>
-                        </div>";
+                        </div>
+                        <div class='brand-relatedproducts'>
+                            <h3>Products from ".$row['brand'].":</h3>";
+                            $query1 = "SELECT * FROM indian_temp WHERE company LIKE '".$brand."'";
+                            $result1 = mysqli_query($con, $query1);
+                            while($row1 = mysqli_fetch_array($result1)){
+                                echo $row1['name'];
+                            }
+                        echo "</div>";
                     }
                 }
             }

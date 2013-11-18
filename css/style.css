@@ -302,7 +302,6 @@ select{
 }
 .brand-showcase-element-box img{
     width: 148px;
-    min-height: 50px;
     position: absolute;
     top: 0;
     bottom: 0;

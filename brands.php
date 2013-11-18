@@ -24,8 +24,10 @@ echo"
                 while($row = mysqli_fetch_array($result)){
                 echo "
                     <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
-                        <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                        <a href='brands.php?brand=".$row['brand']."'>
+                            <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
+                            <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                        </a>
                     </div>";
                	}
                 echo"</div>
@@ -37,8 +39,10 @@ echo"
 					while($row = mysqli_fetch_array($result)){
 					echo "
                     <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
-                        <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                        <a href='brands.php?brand=".$row['brand']."'>
+                            <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
+                            <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                        </a>
                     </div>";
                 	}
                 	echo"</div>
@@ -50,8 +54,10 @@ echo"
                     while($row = mysqli_fetch_array($result)){
                     echo "
                     <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
-                        <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                        <a href='brands.php?brand=".$row['brand']."'>
+                            <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
+                            <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                        </a>
                     </div>";
                     }
                     echo"</div>
@@ -63,8 +69,10 @@ echo"
                     while($row = mysqli_fetch_array($result)){
                     echo "
                     <div class='brand-showcase-element'>
-                        <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
-                        <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                        <a href='brands.php?brand=".$row['brand']."'>
+                            <div class='brand-showcase-element-box'><img src='".$row['url']."'></div>
+                            <div class='brand-showcase-element-text'>".$row['brand']."</div>
+                        </a>
                     </div>";
                     }
                     echo"</div>

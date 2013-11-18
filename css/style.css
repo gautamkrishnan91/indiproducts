@@ -324,6 +324,29 @@ select{
     margin-top: 50px;
     font-size: 20px;
 }
+.brand-singleContainer{
+    margin-top: 50px;
+    width: 600px;
+}
+.brand-singleContainer table{
+    margin-top: 50px;
+    float: left;
+    max-width: 420px;
+}
+.brand-singleContainer table tr {
+    height: 35px;
+    line-height: 21px;
+}
+.brand-singleContainer table tr .left{
+    width : 150px;
+}
+.brand-singleContainer img{
+    float: right;
+    width: 148px;
+    height: auto;
+    max-height: 150px;
+    margin-top: 50px;
+}
 
 /* Submit form */
 

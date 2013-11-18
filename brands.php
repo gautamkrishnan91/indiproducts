@@ -71,13 +71,32 @@ echo"
             </div>";
             }
             else{
-                $query = "SELECT * FROM brands WHERE brand LIKE '%".$brand."%'";
+                $query = "SELECT * FROM brands WHERE brand LIKE '".$brand."' LIMIT 1";
                 $result = mysqli_query($con, $query);
                 if(mysqli_num_rows($result) == 0){
                     echo "<div class='brands-blankslate'>Sorry, no brands found for your query.</div>";
                 }
                 else{
-                    
+                    while($row = mysqli_fetch_array($result)){
+                        echo "<div class='brand-singleContainer'>
+                            <h3>Brand Information</h3>
+                            <img src='".$row['url']."'>
+                            <table>
+                                <tr>
+                                    <td class='left'>Brand Name:</td>
+                                    <td>".$row['brand']."</td>
+                                </tr>
+                                <tr>
+                                    <td class='left'>Category Served:</td>
+                                    <td>".$row['category']."</td>
+                                </tr>
+                                <tr>
+                                    <td class='left'>About:</td>
+                                    <td>".$row['about']."</td>
+                                </tr>
+                            </table>
+                        </div>";
+                    }
                 }
             }
  		echo"</div>

@@ -6,15 +6,17 @@ function submitSubCategory(sender){
     	document.indian_form.prod_subcat.options.length=0;
 
         document.indian_form.prod_subcat.options[0]=new Option("Baby Foods", "Baby Foods", true, false);
-    	document.indian_form.prod_subcat.options[0]=new Option("Biscuits", "Biscuits", true, false);
-    	document.indian_form.prod_subcat.options[1]=new Option("Chips", "Chips", false, false);
-		document.indian_form.prod_subcat.options[2]=new Option("Chocolates", "Chocolates", false, false);
-		document.indian_form.prod_subcat.options[3]=new Option("Coffee Shops", "Coffee Shops", false, false);
-		document.indian_form.prod_subcat.options[4]=new Option("Confectioneries", "Confectioneries", false, false);
-		document.indian_form.prod_subcat.options[5]=new Option("Ice Creams", "Ice Creams", false, false);
-		document.indian_form.prod_subcat.options[6]=new Option("Other Packaged Foods", "Other Packaged Foods", false, false);
-		document.indian_form.prod_subcat.options[7]=new Option("Pizzerias", "Pizzerias", false, false);
-		document.indian_form.prod_subcat.options[8]=new Option("Restaurants", "Restaurants", false, false);
+    	document.indian_form.prod_subcat.options[1]=new Option("Biscuits", "Biscuits", true, false);
+    	document.indian_form.prod_subcat.options[2]=new Option("Chips", "Chips", false, false);
+		document.indian_form.prod_subcat.options[3]=new Option("Chocolates", "Chocolates", false, false);
+		document.indian_form.prod_subcat.options[4]=new Option("Coffee Shops", "Coffee Shops", false, false);
+		document.indian_form.prod_subcat.options[5]=new Option("Confectioneries", "Confectioneries", false, false);
+		document.indian_form.prod_subcat.options[6]=new Option("Ice Creams", "Ice Creams", false, false);
+		document.indian_form.prod_subcat.options[7]=new Option("Other Packaged Foods", "Other Packaged Foods", false, false);
+		document.indian_form.prod_subcat.options[8]=new Option("Pizzerias", "Pizzerias", false, false);
+		document.indian_form.prod_subcat.options[9]=new Option("Restaurants", "Restaurants", false, false);
+        document.indian_form.prod_subcat.options[10]=new Option("Dairy Products", "Dairy Products", false, false);
+        document.indian_form.prod_subcat.options[11]=new Option("Other Foods", "Other Foods", false, false);
     }
     if(sid==2){
     	document.indian_form.prod_subcat.options.length=0;
@@ -24,6 +26,7 @@ function submitSubCategory(sender){
     	document.indian_form.prod_subcat.options[2]=new Option("Mineral Water", "Mineral Water", false, false);
     	document.indian_form.prod_subcat.options[3]=new Option("Powdered drink mixes", "Powdered drink mixes", false, false);
     	document.indian_form.prod_subcat.options[4]=new Option("Soft Drinks", "Soft Drinks", false, false);
+        document.indian_form.prod_subcat.options[5]=new Option("Other Drinks", "Other Drinks", false, false);
     }
     if(sid==3){
     	document.indian_form.prod_subcat.options.length=0;
@@ -58,7 +61,7 @@ function submitSubCategory(sender){
         document.indian_form.prod_subcat.options[6]=new Option("Deodorants", "Deodorants", false, false);
         document.indian_form.prod_subcat.options[7]=new Option("Talcum Powder", "Talcum Powder", false, false);
         document.indian_form.prod_subcat.options[8]=new Option("Other Beauty Products", "Other Beauty Products", false, false);
-        document.indian_form.prod_subcat.options[9  ]=new Option("Other Consumables", "Other Consumables", false, false);
+        document.indian_form.prod_subcat.options[9]=new Option("Other Consumables", "Other Consumables", false, false);
     }
     if(sid==6){
         document.indian_form.prod_subcat.options.length=0;
@@ -80,6 +83,7 @@ function submitSubCategory(sender){
         document.indian_form.prod_subcat.options[2]=new Option("Detergents", "Detergents", false, false);
         document.indian_form.prod_subcat.options[3]=new Option("Sanitary Products", "Sanitary Products", false, false);
         document.indian_form.prod_subcat.options[4]=new Option("Furniture", "Furniture", false, false);
+        document.indian_form.prod_subcat.options[5]=new Option("Other Home and Living", "Other Home and Living", false, false);
     }
     if(sid==8){
         document.indian_form.prod_subcat.options.length=0;

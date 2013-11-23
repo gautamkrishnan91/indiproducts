@@ -12,52 +12,12 @@ echo"
 	<body>";
 		include 'header.php';
         $product = strtolower($product);
-        if(($category == '') || ($category == 'food') || ($category == 'beverages') || ($category == 'fashion and clothing') || ($category == 'electronics') || ($category == 'consumables') || ($category == 'twowheelers') || ($category == 'homeandliving') || ($category == 'other')){
+        $query = "SELECT * FROM indian_temp WHERE name LIKE '".$product."' LIMIT 1";
+        $result = mysqli_query($con, $query);
+        if(mysqli_num_rows($result) != 0){
         echo"
- 		<div id='content-wrapper'>
-            <div class='categories-left'>
-                <ul>
-                    <li>All</li>
-                    <li>Food</li>
-                    <li>Beverages</li>
-                    <li>Fashion and Clothing</li>
-                    <li>Electronics</li>
-                    <li>Beauty, Personal Care and Consumables</li>
-                    <li>Two-Wheelers and Automobiles</li>
-                    <li>Home and Living</li>
-                    <li>Other</li>
-                </ul>
-            </div>
-            <div class='categories-right'>
-                <ul class='categories-master'>";
-                    if($category == ''){
-                    $query = "SELECT DISTINCT company FROM indian_temp";
-                    }
-                    else{
-                    $query = "SELECT DISTINCT company FROM indian_temp WHERE category LIKE '".$category."'";
-                    }
-                    $result = mysqli_query($con, $query);
-                    $resultSet = array();
-                    while($row = mysqli_fetch_array($result)){
-                        $resultSet[] = $row['company'];
-                    }
-                    for($asci = 97; $asci < 123; $asci++){
-                        $charac = chr($asci);
-                        for($i=0;$i<count($resultSet);$i++){
-                            if(strcasecmp($charac, $resultSet[$i][0])==0){
-                                echo"
-                                <li>
-                                    <ul class='categories-inner'>";
-                                    for($i=0;$i<count($resultSet);$i++){
-                                        if(strcasecmp($charac, $resultSet[$i][0])==0)
-                                        echo "<li>".$resultSet[$i]."</li>";
-                                    }
-                                echo"</ul>
-                                </li>";
-                            }
-                        }
-                    }
-            
-            echo"</ul></div>";}
+ 		<div id='content-wrapper'>    
+            <div>Hi</div>
+        </div>";}
         echo"</div></body>"
 ?>

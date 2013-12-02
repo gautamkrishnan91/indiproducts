@@ -13,25 +13,25 @@ echo"
 	<body>";
 		include 'header.php';
         $category = strtolower($category);
-        if(($category == '') || ($category == 'food') || ($category == 'beverages') || ($category == 'fashion and clothing') || ($category == 'electronics') || ($category == 'consumables') || ($category == 'twowheelers') || ($category == 'homeandliving') || ($category == 'other')){
+        if(($category == '') || ($category == 'all') || ($category == 'food') || ($category == 'beverages') || ($category == 'fashion and clothing') || ($category == 'electronics') || ($category == 'consumables') || ($category == 'twowheelers') || ($category == 'homeandliving') || ($category == 'other')){
         echo"
  		<div id='content-wrapper'>
             <div class='categories-left'>
                 <ul>
-                    <li>All</li>
-                    <li>Food</li>
-                    <li>Beverages</li>
-                    <li>Fashion and Clothing</li>
-                    <li>Electronics</li>
-                    <li>Beauty, Personal Care and Consumables</li>
-                    <li>Two-Wheelers and Automobiles</li>
-                    <li>Home and Living</li>
-                    <li>Other</li>
+                    <li><a href='categories.php?category=All'>All</a></li>
+                    <li><a href='categories.php?category=Food'>Food</a></li>
+                    <li><a href='categories.php?category=Beverages'>Beverages</a></li>
+                    <li><a href='categories.php?category=Fashion and Clothing'>Fashion and Clothing</a></li>
+                    <li><a href='categories.php?category=Electronics'>Electronics</a></li>
+                    <li><a href='categories.php?category=Consumables'>Beauty, Personal Care and Consumables</a></li>
+                    <li><a href='categories.php?category=Twowheelers'>Two-Wheelers and Automobiles</a></li>
+                    <li><a href='categories.php?category=HomeAndLiving'>Home and Living</a></li>
+                    <li><a href='categories.php?category=Other'>Other</a></li>
                 </ul>
             </div>
             <div class='categories-right'>
                 <ul class='categories-master'>";
-                    if($category == ''){
+                    if(($category == '') || ($category == 'all')){
                     $query = "SELECT DISTINCT company FROM indian_temp";
                     }
                     else{
